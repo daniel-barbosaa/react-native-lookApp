@@ -1,12 +1,17 @@
 import React from 'react';
-import {View} from 'react-native';
-import { Title } from '../../styles';
+
+import { Title, Box, Text, Button, Spacer } from '../../components/index';
 
 const Home = () => {
   return (
-    <View>
-      <Title>OLÁ</Title>
-    </View>
+    <Box justify="center" hasPadding align="center" background={'gray50'}>
+      <Title color={'danger'} >Olá mundo</Title>
+      <Text>teste</Text>
+      <Spacer size="100px"  />
+      <Button block>
+        <Text color={'light'}>teste</Text>
+      </Button>
+    </Box>
   );
 };
 
