@@ -31,13 +31,16 @@ export const Box = styled.View`
     overflow: hidden;
     flex: ${props => props.height ? 'none' : 1};
     width: ${props => props.fluid ? '100%' : props.width || 'auto'};
+    max-width: ${props => props.fluid ? '100%' : props.width || 'auto'};
     height: ${props => props.height || 'auto'} ;
+    max-height: ${props => props.height || 'auto'} ;
     margin: ${props => props.spacing || 0};
     flex-direction: ${props => props.row ? 'row' : 'column'};
     justify-content: ${props => props.justify || 'flex-start'};
     align-items: ${props => props.align || 'flex-start'} ;
     padding: ${props => props.hasPadding ? '20px' : '0'};
     border-radius: ${props => props.radius || '0px'};
+    border: ${props => props.border || 'none'};
     background: ${props => props.background ? colors[props.background] || props.background : 'transparent'};
 `;
 
@@ -57,3 +60,53 @@ export const Spacer = styled.View`
     width: 100%;
     height: ${props => props.size || '10px'};
 `;
+
+export const Input = styled.TextInput.attrs({
+    placeholderTextColor: colors.muted,
+})`
+    display: flex;
+    width: 100%;
+    padding: 13px 15px;
+    font-size: 17px;
+    border-radius: 5px;
+    background: ${colors.light} ;
+    border: 1px solid ${colors.muted};
+    color: ${colors.dark};
+`;
+
+export const AreaView = styled.SafeAreaView`
+    flex-direction: row;
+    
+`;
+
+
+export const Touchable = styled.TouchableOpacity`
+    display: flex;
+    overflow: hidden;
+    flex: ${props => props.height ? 'none' : 1};
+    width: ${props => props.fluid ? '100%' : props.width || 'auto'};
+    max-width: ${props => props.fluid ? '100%' : props.width || 'auto'};
+    height: ${props => props.height || 'auto'} ;
+    max-height: ${props => props.height || 'auto'} ;
+    margin: ${props => props.spacing || 0};
+    flex-direction: ${props => props.row ? 'row' : 'column'};
+    justify-content: ${props => props.justify || 'flex-start'};
+    align-items: ${props => props.align || 'flex-start'} ;
+    padding: ${props => props.hasPadding ? '20px' : '0'};
+    border-radius: ${props => props.radius || '0px'};
+    border: ${props => props.border || 'none'};
+    background: ${props => props.background ? colors[props.background] || props.background : 'transparent'};
+`;
+
+export const ScrollView = styled.ScrollView.attrs({
+    showsHorizontalScrollIndicator: false,
+    showsVerticalScrollIndicator: false,
+})`
+    padding: ${props => props.hasPadding ? '20px' : '0'};
+    flex: ${props => props.height ? 'none' : 1};
+    width: ${props => props.fluid ? '100%' : props.width || 'auto'};
+    height: ${props => props.height || 'auto'} ;
+    background: ${props => props.background ? colors[props.background] || props.background : 'transparent'};    
+`;
+
+
