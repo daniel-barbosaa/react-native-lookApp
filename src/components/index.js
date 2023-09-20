@@ -110,3 +110,23 @@ export const ScrollView = styled.ScrollView.attrs({
 `;
 
 
+export const Cover = styled.ImageBackground.attrs(props => ({
+    source: props.image ? {
+        uri: props.image,
+    }
+    : props.source, resizeMode: 'cover',
+}))`
+    width: ${props => props.width || '60px' };
+    height: ${props => props.height || '60px' };
+    margin: ${props => props.spacing || '0px' };
+    border-radius: ${props => props.radius || (props.circle ? props.width || '60px' : '3px' )};
+    border: ${props => props.border || 'none' };
+    background-color: ${colors.muted};
+    flex-direction: ${props => (props.row ? 'row' : 'column')};
+    justify-content: ${props => props.justify || 'flex-start' };
+    align-items: ${props => props.align || 'flex-start' };
+    padding: ${props => (props.hasPadding ? '20px' : '0px') };
+    overflow: hidden;
+`;
+
+
