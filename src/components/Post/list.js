@@ -1,6 +1,7 @@
 import React from 'react';
+import Post from '.';
 import {Box, Text, ScrollView} from '../../components/index';
-import Story from '.';
+
 
 const items = [
     { id: 1, name: 'Item 1' },
@@ -15,19 +16,15 @@ const items = [
     { id: 10, name: 'Item 10' },
   ];
 
-const StoryList = () => {
+const PostList = () => {
     return (
-        <Box fluid >
-            <Box row fluid justify="space-between" hasPadding height="60px">
-                <Text bold color="dark">Stories</Text>
-                <Text color="danger" >Show All</Text>
-            </Box>
-           <ScrollView horizontal style={{paddingLeft: 10}}>
-            {items.map(item => <Story key={item.id}/>)}
-           </ScrollView>
+        <Box>
+           <Box >
+            {items.map(item => <Post key={item.id}>Post</Post>)}
+           </Box>
         </Box>
     );
 };
 
-export default StoryList;
+export default PostList;
 
