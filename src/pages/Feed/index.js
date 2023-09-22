@@ -13,7 +13,6 @@ const Feed = () => {
             <Spacer/>
             <PostList/>
           </ScrollView>
-
         </Box>
     );
 };

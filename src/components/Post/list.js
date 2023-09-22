@@ -18,11 +18,9 @@ const items = [
 
 const PostList = () => {
     return (
-        <Box>
            <Box >
             {items.map(item => <Post key={item.id}>Post</Post>)}
            </Box>
-        </Box>
     );
 };
 
