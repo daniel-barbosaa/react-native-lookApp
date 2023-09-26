@@ -2,9 +2,9 @@ import React from 'react';
 
 import {Box,Button,Spacer,Text, Title, Input} from '../../components/index';
 
-const SingUp = () => {
+const SingUp = ({navigation}) => {
     return (
-        <Box background="light" justify="center" align="center" hasPadding >
+        <Box background="light" justify="center" align="center" hasPadding>
             <Spacer size="70px"/>
             <Title bold variant="small">Create new account</Title>
             <Spacer/>
@@ -16,11 +16,11 @@ const SingUp = () => {
             <Spacer/>
             <Input placeholder="Password" secureTextEntry/>
             <Spacer size="40px"/>
-            <Button block>
+            <Button block  onPress={() => navigation.navigate('Feed')}>
                 <Text color="light">Create new accounts</Text>
             </Button>
             <Spacer/>
-            <Text  onPress={() => alert('deu certo')} underline>Back to signIn</Text>
+            <Text onPress={() => navigation.navigate('SingIn')} underline >Back to signIn</Text>
         </Box>
     );
 };

@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Title, Box, Text, Button, Spacer } from '../../components/index';
 
-const Home = () => {
+const Home = ({navigation}) => {
   return (
     <Box justify="center" hasPadding align="center" background="dark">
      <Box justify="center" align="center">
@@ -13,12 +13,12 @@ const Home = () => {
         and buy your favorite looks.
       </Text>
      </Box>
-     <Box justify="flex-end" align="center">
-     <Button block >
-        <Text color={'light'}>SigIn my account</Text>
+     <Box justify="flex-end" align="center" fluid>
+     <Button block onPress={() => navigation.navigate('SingIn')}>
+        <Text color={'light'}>SingIn my account</Text>
       </Button>
       <Spacer/>
-     <Text underline color="light" onPress={() => alert('text')}>Create new account</Text>
+     <Text underline color="light"  onPress={() => navigation.navigate('SingUp')}>Create new account</Text>
      <Spacer size="50px"/>
      </Box>
     </Box>

@@ -6,6 +6,7 @@
  */
 
 import React from 'react';
+import 'react-native-gesture-handler';
 import type {PropsWithChildren} from 'react';
 import {
   SafeAreaView,

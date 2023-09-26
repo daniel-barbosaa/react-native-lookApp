@@ -3,7 +3,7 @@ import React from 'react';
 import {Box,Button,Spacer,Text, Title, Input} from '../../components/index';
 import { StatusBar } from 'react-native';
 
-const SingIn = () => {
+const SingIn = ({navigation}) => {
     return (
         <>
         <StatusBar barStyle={'dark-content'}/>
@@ -17,11 +17,11 @@ const SingIn = () => {
             <Spacer/>
             <Input placeholder="Password" secureTextEntry/>
             <Spacer size="40px"/>
-            <Button block>
+            <Button block  onPress={() => navigation.navigate('Feed')}>
                 <Text color="light">SignIn into my account</Text>
             </Button>
             <Spacer/>
-            <Text  onPress={() => alert('deu certo')} underline>Create new account</Text>
+            <Text  onPress={() => navigation.navigate('SingUp')} underline>Create new account</Text>
         </Box>
         </>
 
