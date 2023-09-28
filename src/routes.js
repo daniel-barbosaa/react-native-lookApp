@@ -30,7 +30,8 @@ const CustomDrawerComponent = (props) => {
 
 const DrawerComponent = () => {
   return (
-      <Drawer.Navigator initialRouteName="Feed"
+    /* colocar o Feed como initialRouteName */
+      <Drawer.Navigator initialRouteName="Marketplace"
       drawerContent={props => <CustomDrawerComponent  {...props} />}
       screenOptions={{
         headerShow: false,
