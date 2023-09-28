@@ -7,7 +7,7 @@ import {useNavigation} from '@react-navigation/native';
 import {View} from 'react-native';
 
 
-const Header = ({title = 'Explore', right = null}) => {
+const Header = ({title = 'Explore', right = null, goBack = false}) => {
 
     const navigation = useNavigation();
 
@@ -17,8 +17,8 @@ const Header = ({title = 'Explore', right = null}) => {
             style={{borderBottomWidth: 0.5, borderBottomColor: `${colors.muted}`, backgroundColor: colors.light }}
         >
             <AreaView style={{flexDirection:'row' , width: '100%', justifyContent: 'space-between', alignItems: 'center'}}>
-                <Touchable  width="70px" justify="center" align="center" onPress={() => navigation.openDrawer()} hasPadding>
-                  <Icon name="menu" size={20} color="black" />
+                <Touchable  width="70px" justify="center" align="center" onPress={() => navigation[!goBack ? 'openDrawer' : 'goBack']()} hasPadding>
+                  <Icon name={!goBack ? 'menu' : 'arrow-left'} size={20} color="black" />
                 </Touchable>
                 <Box align="center" justify="center">
                     <Text>{title}</Text>
