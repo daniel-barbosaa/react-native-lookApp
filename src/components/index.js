@@ -76,7 +76,6 @@ export const Input = styled.TextInput.attrs({
 
 export const AreaView = styled.SafeAreaView`
     flex-direction: row;
-    
 `;
 
 

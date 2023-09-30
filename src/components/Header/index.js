@@ -15,6 +15,7 @@ const Header = ({title = 'Explore', right = null, goBack = false}) => {
     return (
         <View
             style={{borderBottomWidth: 0.5, borderBottomColor: `${colors.muted}`, backgroundColor: colors.light }}
+
         >
             <AreaView style={{flexDirection:'row' , width: '100%', justifyContent: 'space-between', alignItems: 'center'}}>
                 <Touchable  width="70px" justify="center" align="center" onPress={() => navigation[!goBack ? 'openDrawer' : 'goBack']()} hasPadding>
