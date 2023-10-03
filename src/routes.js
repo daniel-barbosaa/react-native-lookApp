@@ -12,6 +12,7 @@ import Icon from 'react-native-vector-icons/SimpleLineIcons';
 import Marketplace from './pages/Marketplace';
 import Category from './pages/Marketplace/category';
 import Product from './pages/Marketplace/product';
+import Cart from './pages/Cart';
 
 import {colors} from './styles/theme.json';
 import { Text, Title } from './components';
@@ -69,7 +70,7 @@ const DrawerComponent = () => {
 const Routes = () => {
     return (
        <NavigationContainer>
-        <Stack.Navigator initialRouteName="Feed">
+        <Stack.Navigator initialRouteName="Cart">
             <Stack.Screen options={{
                 headerShown: false,
             }} name="Home" component={Home}/>
@@ -88,6 +89,9 @@ const Routes = () => {
              <Stack.Screen options={{
                 headerShown: false,
             }} name="Product" component={Product}/>
+            <Stack.Screen options={{
+                headerShown: false,
+            }} name="Cart" component={Cart}/>
         </Stack.Navigator>
 
        </NavigationContainer>

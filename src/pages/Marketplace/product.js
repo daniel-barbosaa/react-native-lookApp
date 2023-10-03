@@ -5,6 +5,7 @@ import { StretchyScrollView } from 'react-native-stretchy';
 import {Box, Spacer, Text,Title,Touchable, Button} from '../../components/index';
 import Icon from 'react-native-vector-icons/SimpleLineIcons';
 import Header from '../../components/Header';
+import Picker from '../../components/Picker';
 import {colors} from '../../styles/theme.json';
 
 
@@ -23,7 +24,7 @@ const Product = () => {
                     uri:'https://i.pinimg.com/564x/ca/40/70/ca4070db3363c227b0a6e5a16c06af6e.jpg',
                 }}
                 imageOverlay={
-                    <Box background={`${colors.dark}`}  />
+                    <Box background={`${colors.dark}40`}  />
                 }
                 foreground={
                     <Box hasPadding justify="flex-end">
@@ -38,6 +39,21 @@ const Product = () => {
                         <Title color="black">A.P.C. Collection Spring 2015</Title>
                         <Spacer size="30px"/>
                         <Text>Enjoy the beauty of italian cotton all over your body. This item will fit your body and warm you up all over and during spring. This item will fit your body and warm you up all over and during spring.And over and over again, this is the text.</Text>
+                        <Spacer size="30px"/>
+                        <Picker
+                        title= "Size"
+                        options={[
+                            {label: 'PP', value: 'PP'},
+                            {label: 'P', value: 'P'},
+                            {label: 'M', value: 'M'},
+                            {label: 'G', value: 'G'},
+                            {label: 'GG', value: 'GG'},
+                            ]}
+                            initialValue="M"
+                            onChange={(value) => {
+                                alert(value);
+                            }}
+                            />
                         <Spacer size="30px"/>
                         <Button block>
                             <Text color="light">Add to cart</Text>

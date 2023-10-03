@@ -15,13 +15,15 @@
             "sizes": {
                 "small": "22px",
                 "normal": "30px",
-                "big": "35px"
+                "big": "35px",
+                "ultra-small": "16px"
             }
         },
         "text": {
             "sizes": {
                 "small": "13px",
-                "normal": "17px"
+                "normal": "17px",
+                "ultra-small": "10px"
             }
         }
     }

@@ -52,6 +52,7 @@ export const Button = styled.TouchableOpacity`
     background: ${props => colors[props.background || 'primary'] };
     width: ${props => props.block ? '100%' : 'auto'};
     align-items: center;
+    margin-bottom: ${props => props.bottom ? '60px' : 'none'};
 
 `;
 
