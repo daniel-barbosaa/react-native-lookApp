@@ -8,14 +8,18 @@ import Home from './pages/Home/home';
 import SingIn from './pages/Singin';
 import SingUp from './pages/Singup';
 import Feed from './pages/Feed';
+import Orders from './pages/Orders';
+
 import Icon from 'react-native-vector-icons/SimpleLineIcons';
 import Marketplace from './pages/Marketplace';
 import Category from './pages/Marketplace/category';
 import Product from './pages/Marketplace/product';
 import Cart from './pages/Cart';
 
+
 import {colors} from './styles/theme.json';
 import { Text, Title } from './components';
+
 
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -32,7 +36,7 @@ const CustomDrawerComponent = (props) => {
 const DrawerComponent = () => {
   return (
     /* colocar o Feed como initialRouteName */
-      <Drawer.Navigator initialRouteName="Marketplace"
+      <Drawer.Navigator initialRouteName="Orders"
       drawerContent={props => <CustomDrawerComponent  {...props} />}
       screenOptions={{
         headerShow: false,
@@ -57,7 +61,7 @@ const DrawerComponent = () => {
              <Icon name="tag" color={color} size={size}/>
            ),
         }} />
-        <Drawer.Screen name="Orders" component={Feed} options={{
+        <Drawer.Screen name="Orders" component={Orders} options={{
            headerShown: false,
            drawerIcon: ({color, size}) => (
              <Icon name="basket" color={color} size={size} />
@@ -70,7 +74,7 @@ const DrawerComponent = () => {
 const Routes = () => {
     return (
        <NavigationContainer>
-        <Stack.Navigator initialRouteName="Cart">
+        <Stack.Navigator initialRouteName="Feed">
             <Stack.Screen options={{
                 headerShown: false,
             }} name="Home" component={Home}/>
