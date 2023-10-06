@@ -36,7 +36,7 @@ const CustomDrawerComponent = (props) => {
 const DrawerComponent = () => {
   return (
     /* colocar o Feed como initialRouteName */
-      <Drawer.Navigator initialRouteName="Orders"
+      <Drawer.Navigator initialRouteName="Feed"
       drawerContent={props => <CustomDrawerComponent  {...props} />}
       screenOptions={{
         headerShow: false,
@@ -74,7 +74,7 @@ const DrawerComponent = () => {
 const Routes = () => {
     return (
        <NavigationContainer>
-        <Stack.Navigator initialRouteName="Feed">
+        <Stack.Navigator initialRouteName="Home">
             <Stack.Screen options={{
                 headerShown: false,
             }} name="Home" component={Home}/>

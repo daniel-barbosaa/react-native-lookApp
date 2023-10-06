@@ -1,8 +1,10 @@
 import React from 'react';
-
 import { Title, Box, Text, Button, Spacer } from '../../components/index';
 
+
 const Home = ({navigation}) => {
+
+
   return (
     <Box justify="center" hasPadding align="center" background="dark">
      <Box justify="center" align="center">
