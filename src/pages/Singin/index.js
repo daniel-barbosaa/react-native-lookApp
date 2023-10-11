@@ -1,30 +1,63 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import api from '../../services/api';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import {AppContext} from '../../contexts/app';
+
 
 import {Box,Button,Spacer,Text, Title, Input} from '../../components/index';
-import { Alert, StatusBar } from 'react-native';
+import { StatusBar } from 'react-native';
 
-const SingIn = ({navigation}) => {
+const SingIn = ({navigation, replace}) => {
+
+    const {setUser: setUserContext} = useContext(AppContext);
+
     const [user, setUser] = useState({
-        email: '',
-        password: '',
+        'email': '',
+        'password': '',
     });
 
-    const requestLogin = async () => {
-        try {
 
-            const {data: userData} = await api.get('/users', {
-                params: {
+
+    const requestLogin = async () => {
+
+        if (user.email.length === 0 || user.password.length === 0 ){
+            alert('Empty field!');
+            return false;
+        }
+
+         try {
+             const {data: users} = await api.get('/users', {
+                 params: {
                     email: user.email,
                     password: user.password,
-                },
-            });
+                 },
+             }, );
 
-            console.log(userData);
+             const [loggedUser] = users;
 
-        } catch (err){
-            alert(err.message);
-        }
+             if (!loggedUser){
+                alert('Invalid user!');
+                return false;
+             }
+
+            await AsyncStorage.setItem('@user', JSON.stringify(loggedUser));
+
+            setUserContext(loggedUser);
+            navigation.navigate('Feed');
+
+         } catch (err){
+             alert(err.message);
+         }
+
+
+
+
+    // Resolvi aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+
+    // vai a merda erro nojeto :3
+    // Possible Unhandled Promise Rejection (id: 0):
+    // [AxiosError: Network Error]
+
 
     };
 
