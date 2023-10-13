@@ -45,7 +45,7 @@ const Home = ({navigation}) => {
       </Text>
       {loading && <>
         <Spacer size="50px"/>
-        <ActivityIndicator />
+        <ActivityIndicator size="large" />
       </>}
      </Box>
 

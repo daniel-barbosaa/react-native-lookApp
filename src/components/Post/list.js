@@ -16,7 +16,7 @@ const items = [
     { id: 10, name: 'Item 10' },
   ];
 
-const PostList = () => {
+const PostList = ({post}) => {
     return (
            <Box >
             {items.map(item => <Post key={item.id}>Post</Post>)}

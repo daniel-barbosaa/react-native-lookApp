@@ -15,7 +15,7 @@ const items = [
     { id: 10, name: 'Item 10' },
   ];
 
-const StoryList = () => {
+const StoryList = ({stories}) => {
     return (
         <Box fluid >
             <Box row fluid justify="space-between" hasPadding height="60px">

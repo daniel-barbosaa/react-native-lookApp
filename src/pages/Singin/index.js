@@ -20,6 +20,7 @@ const SingIn = ({navigation, replace}) => {
 
     const requestLogin = async () => {
 
+
         if (user.email.length === 0 || user.password.length === 0 ){
             alert('Empty field!');
             return false;
@@ -74,7 +75,7 @@ const SingIn = ({navigation, replace}) => {
             <Input placeholder="E-mail"
             value={user.email}
             onChangeText={(email) => {
-                setUser({...user, email});
+                setUser({...user, email: email.toLowerCase()});
             }}/>
             <Spacer/>
             <Input placeholder="Password"
