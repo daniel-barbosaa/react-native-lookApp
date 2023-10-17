@@ -18,8 +18,8 @@ const items = [
 
 const PostList = ({post}) => {
     return (
-           <Box >
-            {items.map(item => <Post key={item.id}>Post</Post>)}
+           <Box style={{minWidth: '100%'}}>
+            {post.map(post => <Post post={post} key={post.id}>Post</Post>)}
            </Box>
     );
 };

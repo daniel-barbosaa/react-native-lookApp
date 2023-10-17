@@ -44,9 +44,9 @@
         "cover": "https://picsum.photos/500",
         "owner": {
           "username": "teste123",
-          "photo": "https://picsum.photos/50"
+          "photo": "https://picsum.photos/30"
         },
-        "createdAt": "2022-04-21T12:32"
+        "createdAt": "2023-10-16T12:32"
       }
     ],
     "posts": [
@@ -57,15 +57,34 @@
         "isLiked": false,
         "likeInfos": {
           "photos": [
-            "https://picsum.photos/50",
-            "https://picsum.photos/50",
-            "https://picsum.photos/50"
+            "https://picsum.photos/83",
+            "https://picsum.photos/34",
+            "https://picsum.photos/47"
           ],
           "description": "Liked by 10,098"
         },
         "owner": {
           "username": "teste123",
-          "photo": "https://picsum.photos/50"
+          "photo": "https://picsum.photos/21"
+        },
+        "createdAt": "2022-04-21T12:32"
+      },
+      {
+        "id": 2,
+        "cover": "https://picsum.photos/500",
+        "description": "Interview: Shoe Designer John Fluevog On New Book, Spirituality And ‘Slow Fashion’",
+        "isLiked": false,
+        "likeInfos": {
+          "photos": [
+            "https://picsum.photos/83",
+            "https://picsum.photos/34",
+            "https://picsum.photos/47"
+          ],
+          "description": "Liked by 10,098"
+        },
+        "owner": {
+          "username": "teste123",
+          "photo": "https://picsum.photos/21"
         },
         "createdAt": "2022-04-21T12:32"
       }
