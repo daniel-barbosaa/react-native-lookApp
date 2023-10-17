@@ -47,7 +47,7 @@ const Marketplace = ({navigation}) => {
     return (
        <>
         <Header hasPadding title="Categories" right={() =>
-        <Touchable width="70px" onPress={() => getCategory() }>
+        <Touchable width="70px" onPress={() => navigation.navigate('Cart')}>
             <Icon name="bag" size={20}/>
         </Touchable>}
         />

@@ -1,21 +1,21 @@
 /* eslint-disable react/no-unstable-nested-components */
 import React from 'react';
-
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator } from '@react-navigation/stack';
+import Icon from 'react-native-vector-icons/SimpleLineIcons';
 import { createDrawerNavigator, DrawerContentScrollView, DrawerItemList } from '@react-navigation/drawer';
+
 import Home from './pages/Home/home';
 import SingIn from './pages/Singin';
 import SingUp from './pages/Singup';
 import Feed from './pages/Feed';
 import Orders from './pages/Orders';
+import Cart from './pages/Cart';
 
-import Icon from 'react-native-vector-icons/SimpleLineIcons';
+
 import Marketplace from './pages/Marketplace';
 import Category from './pages/Marketplace/category';
 import Product from './pages/Marketplace/product';
-import Cart from './pages/Cart';
-
 
 import {colors} from './styles/theme.json';
 import { Text, Title } from './components';

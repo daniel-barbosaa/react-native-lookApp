@@ -45,7 +45,7 @@ const Category = ({ route, navigation }) => {
     return (
         <>
         <Header title={category.title} right={() =>
-            <Touchable width="70px" onPress={() => alert('isso')}>
+            <Touchable width="70px" onPress={() => navigation.navigate('Cart')}>
                 <Icon name="bag" size={20}/>
             </Touchable>} />
 
