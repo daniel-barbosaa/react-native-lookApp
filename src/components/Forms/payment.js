@@ -23,23 +23,24 @@ const PaymentForm = ({onChange = (creditCart)=> {}}) => {
         <>
              <SegmentedPicker
         ref={pikerRef}
-        onConfirm={(data) => {
+        onConfirm={(validDate) => {
             setData({
-                ...data, valid_date: `${data.month}/${data.year}`,
+                ...data, valid_date: `${validDate.month}/${validDate.year}`,
             });
         }}
         options={[
           {
             key: 'month',
             items: [
-              { label: 'Option 1', value: 'option_1' },
-              { label: 'Option 2', value: 'option_2' },
+              { label: '11', value: '11' },
+              { label: '12', value: '12' },
             ],
           },
           {
             key: 'year',
             items: [
-              { label: 'Option 3', value: 'option_3' },
+              { label: '23', value: '2023' },
+              { label: '24', value: '2024' },
             ],
           },
         ]}
@@ -66,7 +67,7 @@ const PaymentForm = ({onChange = (creditCart)=> {}}) => {
                 <Touchable width="100%" onPress={() => {
                     pikerRef.current.show();
                 }}>
-                    <Input pointerEvents="none" editable={false} placeholder="09/2025"/>
+                    <Input value={data.valid_date} pointerEvents="none" editable={false} placeholder="09/2025"/>
                 </Touchable>
                 <Spacer />
                 <Box row align="center">

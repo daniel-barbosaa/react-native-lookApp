@@ -195,6 +195,26 @@
       "totalValue": 2485,
       "totalItems": 1,
       "id": 4
+    },
+    {
+      "userId": 1,
+      "step": "waiting",
+      "createdAt": "2023-10-19T21:09:46-03:00",
+      "orderNumber": 1697760491475,
+      "trackingNumber": 1697760586072,
+      "totalValue": 982,
+      "totalItems": 1,
+      "id": 5
+    },
+    {
+      "userId": 1,
+      "step": "waiting",
+      "createdAt": "2023-10-19T21:11:22-03:00",
+      "orderNumber": 1697760491475,
+      "trackingNumber": 1697760682960,
+      "totalValue": 1954,
+      "totalItems": 2,
+      "id": 6
     }
   ]
 }

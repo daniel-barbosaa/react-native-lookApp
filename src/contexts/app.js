@@ -5,6 +5,7 @@ export const AppContext = createContext({});
 
 const ContextProvider = ({children}) => {
     const DISCOUNT_PERCENTE = 0.10;
+    const ORDER_NUMBER = new Date().getTime();
     const [user, setUser] = useState({});
     const [cart, setCart] = useState([]);
 
@@ -28,7 +29,7 @@ const ContextProvider = ({children}) => {
         setCart(filteredProduct);
     };
 
-    return <AppContext.Provider value={{user, setUser, cart, addToCart, removeFromCart, DISCOUNT_PERCENTE}}>{children}</AppContext.Provider>;
+    return <AppContext.Provider value={{ORDER_NUMBER,user, setUser, cart, addToCart, removeFromCart, DISCOUNT_PERCENTE}}>{children}</AppContext.Provider>;
 };
 
 export default ContextProvider;

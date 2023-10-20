@@ -1,4 +1,5 @@
 import React, {useState, useContext} from 'react';
+import { ActivityIndicator } from 'react-native';
 import {Box, Text, ScrollView, Title,Spacer} from '../../components/index';
 import Header from '../../components/Header';
 import Tabs from '../../components/Tabs';
@@ -9,11 +10,14 @@ import CongratsModal from '../../components/Modals/congrats';
 import {colors} from '../../styles/theme.json';
 import {AppContext} from '../../contexts/app';
 import Empty from '../../components/Empty';
-
+import util from '../../util';
+import api from '../../services/api';
+import moment from 'moment';
 
 const Cart = () => {
-
-    const {cart, DISCOUNT_PERCENTE} = useContext(AppContext);
+    const [loading , setLoading] = useState(false);
+    const [creditCard, setCreditCard] = useState({});
+    const {cart, DISCOUNT_PERCENTE, user, ORDER_NUMBER} = useContext(AppContext);
     const [showCongrats, setShowCongrats] = useState(false);
     const cartIsEmpty = cart?.length === 0;
     const orderPrice = cart?.reduce((acc , product ) => {
@@ -21,12 +25,62 @@ const Cart = () => {
     },  0);
 
     const totalDiscount = (orderPrice *  DISCOUNT_PERCENTE).toFixed(2);
-
     const delivery = 10;
-
     const valueTotal = orderPrice  + delivery - totalDiscount;
-
     const [tab, setTab] = useState('cart');
+
+    const buyCart = async () => {
+        try {
+            setLoading(true);
+            //Validar os dados do cartão de credito
+            const creditCardValidation = util.isValidCreditCard(creditCard);
+
+            if (creditCardValidation.error){
+                alert(creditCardValidation.message);
+                return false;
+            }
+
+            //Criar a order
+            /*
+                  {
+                "id": 1,
+                "userId": 1,
+                "step": "waiting",
+                "createdAt": "2022-04-21T12:32",
+                "orderNumber": "1947034",
+                "trackingNumber": "IW3475453455",
+                "totalValue": 80.58,
+                "totalItems": 3
+            }
+            */
+
+            const {data: orderData} = await api.post('/orders', {
+                userId: user.id,
+                step: 'waiting',
+                createdAt: moment().format(),
+                orderNumber: ORDER_NUMBER,
+                trackingNumber: new Date().getTime(),
+                totalValue: valueTotal,
+                totalItems: cart?.length,
+            });
+
+            if (!orderData.id){
+                alert('Erro ao fazer pedido, tente denovo!');
+                setLoading(false);
+                return false;
+            }
+
+            //Exibir modal de sucesso
+            setShowCongrats(true);
+
+
+        } catch (err){
+            setLoading(false);
+            alert(err.message);
+        }
+    };
+
+
     return (
        <>
        {showCongrats && <CongratsModal /> }
@@ -52,7 +106,7 @@ const Cart = () => {
 
             <ScrollView  hasPadding background="light">
              <Spacer size= "20px"/>
-             <Title variant="ultra-small">Order number is 458765342</Title>
+             <Title variant="ultra-small">Order number is {ORDER_NUMBER}</Title>
              <Spacer size= "20px"/>
              {tab === 'cart' &&
              <>
@@ -109,13 +163,16 @@ const Cart = () => {
                  <Text color="dark">Cost: $10</Text>
                  <Spacer size="40px"/>
                  <PaymentForm onChange={(creditCartData) => {
-                     console.log(creditCartData);
+                     setCreditCard(creditCartData);
                  }} />
                  <Spacer size="30px"/>
+
+
                  <Button bottom block onPress={() => {
-                 setShowCongrats(true);
+                 buyCart();
                 }}>
-                  <Text color={'light'}>Confirmation</Text>
+                    {!loading &&  <Text color={'light'}>Confirmation</Text>}
+                    {loading && <ActivityIndicator />}
                  </Button>
              </>}
             </ScrollView>
