@@ -7,14 +7,7 @@ import Header from '../../components/Header';
 import {Box, Text, Touchable} from '../../components/index';
 import CategoryList from '../../components/Category/list';
 import Empty from '../../components/Empty';
-
 import api from '../../services/api';
-
-
-
-
-
-
 
 const Marketplace = ({navigation}) => {
     const [loading, setLoading] = useState(false);

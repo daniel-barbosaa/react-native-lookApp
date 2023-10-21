@@ -6,7 +6,7 @@ import Product from './index';
 const ProductList = ({products}) => {
     return (
         <ScrollView fluid>
-            {products?.map(product => <Product product={product} />)}
+            {products?.map(product => <Product key={product.id} product={product} />)}
         </ScrollView>
     );
 };

@@ -1,8 +1,10 @@
 import React from 'react';
+import { useNavigation } from '@react-navigation/native';
 
 import {Box, Spacer, Text, Title,Button, Cover} from '../index';
 
 const CongratsModal = () => {
+    const {navigate} = useNavigation();
     return (
         <Box background="light" hasPadding
         justify="center"
@@ -20,7 +22,7 @@ const CongratsModal = () => {
             </Text>
             <Spacer size="50px"/>
             <Button bottom block onPress={() => {
-               alert('teste');
+               navigate('Orders');
                }}>
                  <Text color={'light'}>Track your order</Text>
                 </Button>

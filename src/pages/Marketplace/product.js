@@ -18,7 +18,7 @@ const Product = ({navigation, route}) => {
     }, [product]);
 
     const {product} = route?.params;
-    const {addToCart, cart} = useContext(AppContext);
+    const {addToCart} = useContext(AppContext);
 
     return (
         <>

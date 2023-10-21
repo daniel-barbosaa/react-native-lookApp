@@ -40,20 +40,6 @@ const Cart = () => {
                 return false;
             }
 
-            //Criar a order
-            /*
-                  {
-                "id": 1,
-                "userId": 1,
-                "step": "waiting",
-                "createdAt": "2022-04-21T12:32",
-                "orderNumber": "1947034",
-                "trackingNumber": "IW3475453455",
-                "totalValue": 80.58,
-                "totalItems": 3
-            }
-            */
-
             const {data: orderData} = await api.post('/orders', {
                 userId: user.id,
                 step: 'waiting',
@@ -75,8 +61,8 @@ const Cart = () => {
 
 
         } catch (err){
-            setLoading(false);
             alert(err.message);
+            setLoading(false);
         }
     };
 

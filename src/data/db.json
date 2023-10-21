@@ -41,7 +41,7 @@
     "stories": [
       {
         "id": 1,
-        "cover": "https://picsum.photos/500",
+        "cover": "https://picsum.photos/100",
         "owner": {
           "username": "teste123",
           "photo": "https://picsum.photos/30"
@@ -71,7 +71,7 @@
       },
       {
         "id": 2,
-        "cover": "https://picsum.photos/500",
+        "cover": "https://picsum.photos/501",
         "description": "Interview: Shoe Designer John Fluevog On New Book, Spirituality And ‘Slow Fashion’",
         "isLiked": false,
         "likeInfos": {
@@ -104,7 +104,7 @@
       "title": "Large striped cardigan",
       "price": 1080,
       "brand": "Raf Simons",
-      "cover": "https://picsum.photos/500",
+      "cover": "https://picsum.photos/87",
       "categoryId": 1,
       "type": "Shirts",
       "description": "Enjoy the beauty of italian cotton all over your body. This item will fit your body and warm you up all over and during spring. This item will fit your body and warm you up all over and during spring.  And over and over again, this is the text.",
@@ -132,7 +132,7 @@
       "title": "Gucci Balaclava",
       "price": 2500,
       "brand": "Gucci",
-      "cover": "https://picsum.photos/500",
+      "cover": "https://picsum.photos/75",
       "categoryId": 1,
       "type": "Balaclava",
       "description": "Awesome product.",
@@ -215,6 +215,56 @@
       "totalValue": 1954,
       "totalItems": 2,
       "id": 6
+    },
+    {
+      "userId": 1,
+      "step": "waiting",
+      "createdAt": "2023-10-19T21:16:12-03:00",
+      "orderNumber": 1697760491475,
+      "trackingNumber": 1697760972941,
+      "totalValue": 2926,
+      "totalItems": 3,
+      "id": 7
+    },
+    {
+      "userId": 1,
+      "step": "waiting",
+      "createdAt": "2023-10-20T20:11:51-03:00",
+      "orderNumber": 1697843478673,
+      "trackingNumber": 1697843511422,
+      "totalValue": 982,
+      "totalItems": 1,
+      "id": 8
+    },
+    {
+      "userId": 6,
+      "step": "waiting",
+      "createdAt": "2023-10-20T20:42:08-03:00",
+      "orderNumber": 1697845293810,
+      "trackingNumber": 1697845328687,
+      "totalValue": 982,
+      "totalItems": 1,
+      "id": 9
+    },
+    {
+      "userId": 6,
+      "step": "canceled",
+      "createdAt": "2023-10-20T20:42:08-03:00",
+      "orderNumber": 1697845293810,
+      "trackingNumber": 1697845328687,
+      "totalValue": 982,
+      "totalItems": 1,
+      "id": 9
+    },
+    {
+      "userId": 6,
+      "step": "delivered",
+      "createdAt": "2023-10-20T20:42:08-03:00",
+      "orderNumber": 1697845293810,
+      "trackingNumber": 1697845328687,
+      "totalValue": 982,
+      "totalItems": 1,
+      "id": 9
     }
   ]
 }
