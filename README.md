@@ -1,79 +1,125 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+<h1>   
+   LookAPP!
+</h1>
 
-# Getting Started
+> Status do Projeto: :heavy_check_mark: :warning: (concluido)
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
 
-## Step 1: Start the Metro Server
+### Tópicos
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+:small_blue_diamond: [Descrição do projeto](#Descrição-do-projeto)
 
-To start Metro, run the following command from the _root_ of your React Native project:
+:small_blue_diamond: [Funcionalidades](#Funcionalidades)
+
+:small_blue_diamond: [Layout da Aplicação](#Layout-da-aplicação)
+
+:small_blue_diamond: [Começando](#Começando)
+
+...
+
+# Descrição do projeto 
+
+**CodeBurguer** esse é uma aplicação desenvolvida com React Native para android, parecido com uma rede social mas bem diferente, nela temos opção de realizar pedidos na loja do appSocial. 
+
+...
+
+# Funcionalidades
+
+:heavy_check_mark: Criação de conta de usuário
+
+:heavy_check_mark: Login de usuário
+
+:heavy_check_mark: Drawer menu com opção de Feed, Marktplace, Pedidos
+
+:heavy_check_mark: Tela de Feed com Storys e Posts
+
+:heavy_check_mark: Marktplace com várias categorias e produtos
+
+:heavy_check_mark: Carrinho pesonalizado de pedidos, opção de aumentar ou diminuir unidades do produto, remover produto do carrinho.
+
+:heavy_check_mark: Opção de pagamento com cartão
+
+:heavy_check_mark: Finalizar pedidos 
+
+
+## Layout da aplicação
+
+<img src="src/readme/lookAPP.gif">
+
+# 🚀 Começando 
+
+<p>Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste.</p>
+
 
 ```bash
-# using npm
-npm start
-
-# OR using Yarn
-yarn start
+    #Clone o projeto interface
+    $ git clone https://github.com/DaniMendess/react-native-lookApp.git
 ```
-
-## Step 2: Start your Application
-
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
-
-### For Android
 
 ```bash
-# using npm
-npm run android
+    #Entre no diretório
+    cd react-native-lookApp
+```
+## 🔧 Instalação
+```bash
+    #Instalando dependências
+    $ npm install
 
-# OR using Yarn
-yarn android
+    ou 
+
+    $ yarn  
 ```
 
-### For iOS
+## Aviso importante :warning:
+
+**Aplicação foi desenvolvida consumindo uma api fake local utilizando o [Json-Server](https://www.npmjs.com/package/json-server)**
 
 ```bash
-# using npm
-npm run ios
+    #Instalando JSON SERVER
+    $ npm npm i json-server
 
-# OR using Yarn
-yarn ios
+    ou 
+
+    $ yarn add json-server
 ```
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+<p>Após ter instalado todas as dependências e ferrementas necessárias execute 👇</p>
 
-## Step 3: Modifying your App
+# ⚙️ Executando
 
-Now that you have successfully run the app, let's modify it.
+```bash
+    #Entre no diretório
+    $ npm start
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+    ou 
+    
+    $ yarn start
+```
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+## Linguagem, dependencias e libs utilizadas :books: 
 
-## Congratulations! :tada:
+- [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+- [React](https://react.dev) 
+- [React-native](https://reactnative.dev)
+- [Drawer-navigation](https://reactnavigation.org/docs/drawer-based-navigation/)
+- [Styled-components](https://styled-components.com)
+- [Vector-icons](https://github.com/oblador/react-native-vector-icons)
+- [Card-validator](https://www.npmjs.com/package/card-validator)
+- [Stretchy](https://github.com/hamidhadi/react-native-stretchy)
 
-You've successfully run and modified your React Native App. :partying_face:
 
-### Now what?
+...
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
 
-# Troubleshooting
+### Thank you for getting here 🤘
 
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+Copyright :copyright: 2023 - **LookAPP!**
 
-# Learn More
 
-To learn more about React Native, take a look at the following resources:
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+
+
+
+
+
