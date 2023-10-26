@@ -265,6 +265,16 @@
       "totalValue": 982,
       "totalItems": 1,
       "id": 9
+    },
+    {
+      "userId": 3,
+      "step": "waiting",
+      "createdAt": "2023-10-26T16:15:12-03:00",
+      "orderNumber": 1698347612650,
+      "trackingNumber": 1698347712402,
+      "totalValue": 982,
+      "totalItems": 1,
+      "id": 10
     }
   ]
 }

@@ -15,7 +15,7 @@ const Home = ({navigation}) => {
   const [loading, setLoading] = useState(true);
 
   const isLogged = async () => {
-    // AsyncStorage.clear();
+    //  AsyncStorage.clear();
     setLoading(true);
 
     const loggedUser = await AsyncStorage.getItem('@user');
