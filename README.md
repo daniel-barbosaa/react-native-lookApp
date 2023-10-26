@@ -15,6 +15,8 @@
 
 :small_blue_diamond: [Começando](#Começando)
 
+:small_blue_diamond: [Começando](#Linguagem-dependencias-e-libs-utilizadas)
+
 ...
 
 # Descrição do projeto 
@@ -46,7 +48,7 @@
 
 <img src="src/readme/lookAPP.gif">
 
-# 🚀 Começando 
+# Começando 
 
 <p>Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste.</p>
 
@@ -97,7 +99,7 @@
     $ yarn start
 ```
 
-## Linguagem, dependencias e libs utilizadas :books: 
+## Linguagem, dependencias e libs utilizadas 
 
 - [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
 - [React](https://react.dev) 
@@ -112,7 +114,7 @@
 ...
 
 
-### Thank you for getting here 🤘
+### Obrigador por chegar até aqui 🤘
 
 Copyright :copyright: 2023 - **LookAPP!**
 
