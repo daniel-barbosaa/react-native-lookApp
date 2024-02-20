@@ -21,7 +21,7 @@
 
 # Descrição do projeto 
 
-**CodeBurguer** esse é uma aplicação desenvolvida com React Native para android, parecido com uma rede social mas bem diferente, nela temos opção de realizar pedidos na loja do appSocial. 
+**LookApp** esse é uma aplicação desenvolvida com React Native para android, parecido com uma rede social mas bem diferente, nela temos opção de realizar pedidos na loja do appSocial. 
 
 ...
 
